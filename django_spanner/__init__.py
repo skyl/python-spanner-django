@@ -64,16 +64,16 @@ def autofield_init(self, *args, **kwargs):
     self.default = gen_rand_int64
 
 
-AutoField.__init__ = autofield_init
-AutoField.db_returning = False
-AutoField.validators = []
+# AutoField.__init__ = autofield_init
+# AutoField.db_returning = False
+# AutoField.validators = []
 if USING_DJANGO_3:
-    SmallAutoField.__init__ = autofield_init
-    BigAutoField.__init__ = autofield_init
-    SmallAutoField.db_returning = False
-    BigAutoField.db_returning = False
-    SmallAutoField.validators = []
-    BigAutoField.validators = []
+    # SmallAutoField.__init__ = autofield_init
+    # BigAutoField.__init__ = autofield_init
+    # SmallAutoField.db_returning = False
+    # BigAutoField.db_returning = False
+    # SmallAutoField.validators = []
+    # BigAutoField.validators = []
 
     def get_prep_value(self, value):
         # Json encoding and decoding for spanner is done in python-spanner.
